@@ -124,7 +124,9 @@ var str = 'this is my sentence';
 //Write a function called reverse that takes a given str as it's only argument and returns that string after it's been reversed
 
   //Code Here
-
+function reverse(str){
+  return str.split('').reverse().join('');
+}
 
 //Next Problem
 
@@ -149,9 +151,31 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
 //removeItem(myGroceryList, 'chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
+function removeItem(myGroceryList, item) {
+  var empty = [];
+  if(item === undefined) {
+    return empty;
+  } else {
+    for(var i = 0; i < myGroceryList.length; i++) {
+      if (myGroceryList[i] === item) {
+        myGroceryList.splice(i, 1);
+      } 
+    }
+  }
+  return myGroceryList;
+}
 
-
-
+function addItem(myGroceryList, item) {
+  var empty = [];
+  if(item === undefined){
+    return empty;
+  } else {
+      if(myGroceryList.indexOf(item) === -1) {
+      myGroceryList.push(item);
+    } 
+  }
+  return myGroceryList;
+}
 //Next Problem
 
 
