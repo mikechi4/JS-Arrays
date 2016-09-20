@@ -183,7 +183,13 @@ function addItem(myGroceryList, item) {
 //Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 
   //Code Here
-
+function maker() {
+  var arr = [];
+  for(var i = 1; i <= 215; i++) {
+    arr.push(i);
+  }
+  return arr;
+}
 
 
 //Next Problem
@@ -194,8 +200,12 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 //array after adding ten to each item in numbers. *Verify your answer is correct. --> [15, 19, 26, 29, 35, 44, 58]
 
   //Code Here
-
-
+function addTen(numbers) {
+  for(var i = 0; i < numbers.length; i++) {
+    numbers[i] = numbers[i] * 1 + 10;
+  }
+  return numbers;
+}
 
 //Next Problem
 
